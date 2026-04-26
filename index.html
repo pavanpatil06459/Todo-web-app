@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Taskly</title>
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="style.css"/>
+</head>
+<body>
+
+<header>
+  <div class="logo">Taskly</div>
+  <div class="tagline">Your quiet place to get things done.</div>
+  <div class="stats-row">
+    <div class="stat">
+      <span class="stat-num" id="totalCount">0</span>
+      <span class="stat-label">Total</span>
+    </div>
+    <div class="stat">
+      <span class="stat-num" id="pendingCount">0</span>
+      <span class="stat-label">Pending</span>
+    </div>
+    <div class="stat">
+      <span class="stat-num green" id="doneCount">0</span>
+      <span class="stat-label">Done</span>
+    </div>
+  </div>
+</header>
+
+<div class="input-area">
+  <input class="task-input" id="taskInput" type="text" placeholder="What needs to get done?" maxlength="200" />
+  <button class="add-btn" onclick="addTask()">+ Add</button>
+</div>
+
+<div class="filter-row">
+  <button class="filter-btn active" onclick="setFilter('all', this)">All</button>
+  <button class="filter-btn" onclick="setFilter('pending', this)">Pending</button>
+  <button class="filter-btn" onclick="setFilter('done', this)">Done</button>
+</div>
+
+<div class="task-list" id="taskList"></div>
+
+<div class="bottom-bar">
+  <button class="clear-btn" onclick="clearCompleted()">Clear completed</button>
+</div>
+
+<script src="app.js"></script>
+</body>
+</html>
