@@ -74,7 +74,7 @@ todo-web-app/
 
 ## Screenshots
 
-<img src="Screenshot/todoweb.png" width="300" />
+<img src="screenshot/todoweb.png" width="300" />
 
 ---
 
