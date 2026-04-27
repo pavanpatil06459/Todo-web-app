@@ -42,9 +42,9 @@ function render() {
 
   if (!visible.length) {
     const msgs = {
-      all:     ['✨', 'All clear!',        'Add a task above to get started.'],
-      pending: ['🎉', 'Nothing pending!',  'All done for now.'],
-      done:    ['📋', 'Nothing done yet',  'Complete a task to see it here.'],
+      all:     [ 'All clear!',        'Add a task above to get started.'],
+      pending: [ 'Nothing pending!',  'All done for now.'],
+      done:    [ 'Nothing done yet',  'Complete a task to see it here.'],
     };
     const [emoji, title, sub] = msgs[filter];
     list.innerHTML = `
